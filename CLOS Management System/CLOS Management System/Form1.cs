@@ -16,5 +16,29 @@ namespace CLOS_Management_System
         {
             InitializeComponent();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

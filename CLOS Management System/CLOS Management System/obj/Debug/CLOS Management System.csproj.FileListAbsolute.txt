@@ -1,0 +1,11 @@
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\bin\Debug\CLOS Management System.exe.config
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\bin\Debug\CLOS Management System.exe
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\bin\Debug\CLOS Management System.pdb
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS Management System.csprojAssemblyReference.cache
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.Form1.resources
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.Properties.Resources.resources
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS Management System.csproj.GenerateResource.cache
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS Management System.csproj.CoreCompileInputs.cache
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS Management System.exe
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS Management System.pdb
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.Home.resources
