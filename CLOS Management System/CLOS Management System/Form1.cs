@@ -40,5 +40,12 @@ namespace CLOS_Management_System
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            Student obj = new Student();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
     }
 }
