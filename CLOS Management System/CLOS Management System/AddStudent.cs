@@ -111,7 +111,7 @@ namespace CLOS_Management_System
         {
             try
             {
-                string query = "Select * from Student";
+                string query = "Select * from Student Order by RegistrationNumber";
                 SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
                 SqlDataReader reader = sqlcmd.ExecuteReader();
                 while (reader.Read())

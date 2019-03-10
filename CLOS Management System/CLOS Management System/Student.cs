@@ -23,5 +23,12 @@ namespace CLOS_Management_System
             Controls.Add(obj);
             obj.BringToFront();
         }
+
+        private void btnMarkAttendence_Click(object sender, EventArgs e)
+        {
+            MarkAttendence obj = new MarkAttendence();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
     }
 }

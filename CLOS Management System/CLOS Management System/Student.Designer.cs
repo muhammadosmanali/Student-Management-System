@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.panelAddStudent = new System.Windows.Forms.Panel();
-            this.btnAddStudents = new System.Windows.Forms.Button();
             this.btnAttendenceStatus = new System.Windows.Forms.Button();
             this.btnMarkAttendence = new System.Windows.Forms.Button();
             this.btnLookUpStudents = new System.Windows.Forms.Button();
+            this.btnAddStudents = new System.Windows.Forms.Button();
             this.panelAddStudent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,22 +49,6 @@
             this.panelAddStudent.Name = "panelAddStudent";
             this.panelAddStudent.Size = new System.Drawing.Size(861, 158);
             this.panelAddStudent.TabIndex = 0;
-            // 
-            // btnAddStudents
-            // 
-            this.btnAddStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
-            this.btnAddStudents.FlatAppearance.BorderSize = 0;
-            this.btnAddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudents.Image")));
-            this.btnAddStudents.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddStudents.Location = new System.Drawing.Point(91, 34);
-            this.btnAddStudents.Name = "btnAddStudents";
-            this.btnAddStudents.Size = new System.Drawing.Size(129, 87);
-            this.btnAddStudents.TabIndex = 6;
-            this.btnAddStudents.Text = "Add Student";
-            this.btnAddStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAddStudents.UseVisualStyleBackColor = false;
-            this.btnAddStudents.Click += new System.EventHandler(this.btnAddStudents_Click);
             // 
             // btnAttendenceStatus
             // 
@@ -95,6 +79,7 @@
             this.btnMarkAttendence.Text = "Mark Attendence";
             this.btnMarkAttendence.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMarkAttendence.UseVisualStyleBackColor = false;
+            this.btnMarkAttendence.Click += new System.EventHandler(this.btnMarkAttendence_Click);
             // 
             // btnLookUpStudents
             // 
@@ -110,6 +95,22 @@
             this.btnLookUpStudents.Text = "Lookup Students\r\n";
             this.btnLookUpStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLookUpStudents.UseVisualStyleBackColor = false;
+            // 
+            // btnAddStudents
+            // 
+            this.btnAddStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
+            this.btnAddStudents.FlatAppearance.BorderSize = 0;
+            this.btnAddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudents.Image")));
+            this.btnAddStudents.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddStudents.Location = new System.Drawing.Point(91, 34);
+            this.btnAddStudents.Name = "btnAddStudents";
+            this.btnAddStudents.Size = new System.Drawing.Size(129, 87);
+            this.btnAddStudents.TabIndex = 6;
+            this.btnAddStudents.Text = "Add Student";
+            this.btnAddStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddStudents.UseVisualStyleBackColor = false;
+            this.btnAddStudents.Click += new System.EventHandler(this.btnAddStudents_Click);
             // 
             // Student
             // 
