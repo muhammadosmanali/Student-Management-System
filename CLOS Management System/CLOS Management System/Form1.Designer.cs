@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelHome = new System.Windows.Forms.Panel();
+            this.btnStudents = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRubrics = new System.Windows.Forms.Button();
             this.btnValuation = new System.Windows.Forms.Button();
-            this.BtnCLOS = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.panelExit = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnStudents = new System.Windows.Forms.Button();
+            this.BtnCLOS = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.panelExit.SuspendLayout();
@@ -50,13 +50,13 @@
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.White;
+            this.panelHome.Controls.Add(this.BtnCLOS);
             this.panelHome.Controls.Add(this.btnStudents);
             this.panelHome.Controls.Add(this.label2);
             this.panelHome.Controls.Add(this.label1);
             this.panelHome.Controls.Add(this.panel3);
             this.panelHome.Controls.Add(this.btnRubrics);
             this.panelHome.Controls.Add(this.btnValuation);
-            this.panelHome.Controls.Add(this.BtnCLOS);
             this.panelHome.Controls.Add(this.btnHome);
             this.panelHome.Controls.Add(this.pbHome);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Left;
@@ -64,6 +64,21 @@
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(76, 545);
             this.panelHome.TabIndex = 0;
+            // 
+            // btnStudents
+            // 
+            this.btnStudents.FlatAppearance.BorderSize = 0;
+            this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnStudents.Image")));
+            this.btnStudents.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStudents.Location = new System.Drawing.Point(3, 191);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.Size = new System.Drawing.Size(70, 58);
+            this.btnStudents.TabIndex = 5;
+            this.btnStudents.Text = "  Students";
+            this.btnStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStudents.UseVisualStyleBackColor = true;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
             // label2
             // 
@@ -124,21 +139,6 @@
             this.btnValuation.UseVisualStyleBackColor = true;
             this.btnValuation.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // BtnCLOS
-            // 
-            this.BtnCLOS.FlatAppearance.BorderSize = 0;
-            this.BtnCLOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCLOS.Image = ((System.Drawing.Image)(resources.GetObject("BtnCLOS.Image")));
-            this.BtnCLOS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnCLOS.Location = new System.Drawing.Point(3, 255);
-            this.BtnCLOS.Name = "BtnCLOS";
-            this.BtnCLOS.Size = new System.Drawing.Size(70, 58);
-            this.BtnCLOS.TabIndex = 2;
-            this.BtnCLOS.Text = " CLOS";
-            this.BtnCLOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCLOS.UseVisualStyleBackColor = true;
-            this.BtnCLOS.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -198,20 +198,20 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // btnStudents
+            // BtnCLOS
             // 
-            this.btnStudents.FlatAppearance.BorderSize = 0;
-            this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnStudents.Image")));
-            this.btnStudents.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStudents.Location = new System.Drawing.Point(3, 191);
-            this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(70, 58);
-            this.btnStudents.TabIndex = 5;
-            this.btnStudents.Text = "  Students";
-            this.btnStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStudents.UseVisualStyleBackColor = true;
-            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
+            this.BtnCLOS.FlatAppearance.BorderSize = 0;
+            this.BtnCLOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCLOS.Image = ((System.Drawing.Image)(resources.GetObject("BtnCLOS.Image")));
+            this.BtnCLOS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnCLOS.Location = new System.Drawing.Point(3, 256);
+            this.BtnCLOS.Name = "BtnCLOS";
+            this.BtnCLOS.Size = new System.Drawing.Size(70, 58);
+            this.BtnCLOS.TabIndex = 6;
+            this.BtnCLOS.Text = " CLOS";
+            this.BtnCLOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCLOS.UseVisualStyleBackColor = true;
+            this.BtnCLOS.Click += new System.EventHandler(this.BtnCLOS_Click);
             // 
             // Form1
             // 
@@ -243,12 +243,12 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelExit;
         private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button BtnCLOS;
         private System.Windows.Forms.Button btnValuation;
         private System.Windows.Forms.Button btnRubrics;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnStudents;
+        private System.Windows.Forms.Button BtnCLOS;
     }
 }
 

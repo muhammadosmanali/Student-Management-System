@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace CLOS_Management_System
 {
@@ -35,5 +36,15 @@ namespace CLOS_Management_System
             if (connection.State == ConnectionState.Open)
                 connection.Close();
         }
+
+        public void add_Update_Delete(string query, string messege)
+        {
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            sqlcmd.ExecuteNonQuery();
+            MessageBox.Show(messege);
+            DatabaseConnection.getInstance().closeConnection();
+        }
+
+
     }
 }

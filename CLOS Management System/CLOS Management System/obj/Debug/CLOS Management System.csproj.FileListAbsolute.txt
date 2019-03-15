@@ -13,3 +13,6 @@ D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\C
 D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.AddStudent.resources
 D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.MarkAttendence.resources
 D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.AttendanceStatus.resources
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.CLOS.resources
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.AddCLOS.resources
+D:\Visual Studio Repositories\Student-Management-System\CLOS Management System\CLOS Management System\obj\Debug\CLOS_Management_System.AddRubrics.resources

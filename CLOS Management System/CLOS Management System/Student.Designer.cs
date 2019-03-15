@@ -93,7 +93,7 @@
             this.btnLookUpStudents.Name = "btnLookUpStudents";
             this.btnLookUpStudents.Size = new System.Drawing.Size(129, 87);
             this.btnLookUpStudents.TabIndex = 6;
-            this.btnLookUpStudents.Text = "Lookup Students\r\n";
+            this.btnLookUpStudents.Text = "Student Detials";
             this.btnLookUpStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLookUpStudents.UseVisualStyleBackColor = false;
             // 
@@ -108,7 +108,7 @@
             this.btnAddStudents.Name = "btnAddStudents";
             this.btnAddStudents.Size = new System.Drawing.Size(129, 87);
             this.btnAddStudents.TabIndex = 6;
-            this.btnAddStudents.Text = "Add Student";
+            this.btnAddStudents.Text = "Manage Student";
             this.btnAddStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddStudents.UseVisualStyleBackColor = false;
             this.btnAddStudents.Click += new System.EventHandler(this.btnAddStudents_Click);

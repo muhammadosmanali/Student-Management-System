@@ -28,7 +28,8 @@ namespace CLOS_Management_System
 
                 string messege = txtFirstName.Text + " " + txtLastName.Text + " Added Successfully";
 
-                add_Update_Delete(query, messege);
+                DatabaseConnection.getInstance().add_Update_Delete(query, messege);
+                clear();
             }
             catch(Exception ex)
             {
@@ -50,38 +51,13 @@ namespace CLOS_Management_System
 
                 string messege = txtFirstName.Text + " " + txtLastName.Text + " Updated Successfully";
 
-                add_Update_Delete(query, messege);
+                DatabaseConnection.getInstance().add_Update_Delete(query, messege);
+                clear();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void add_Update_Delete(string query, string messege)
-        {
-            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-            sqlcmd.ExecuteNonQuery();
-            MessageBox.Show(messege);
-            clear();
-            DatabaseConnection.getInstance().closeConnection();
-        }
-
-        private int status()
-        {
-            int status;
-            if (cmbStatus.Text == "Current Student")
-                status = 5;
-            else
-                status = 6;
-
-            return status;
-        }
-
-        private void clear()
-        {
-            txtFirstName.Text = txtLastName.Text = txtContact.Text
-                = txtEmail.Text = txtRegNo.Text = cmbStatus.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -93,7 +69,8 @@ namespace CLOS_Management_System
                     string query = "Delete Student Where RegistrationNumber = '" + txtRegNo.Text + "'";
                     string messege = txtFirstName.Text + " " + txtLastName.Text + " Deleted Successfully";
 
-                    add_Update_Delete(query, messege);
+                    DatabaseConnection.getInstance().add_Update_Delete(query, messege);
+                    clear();
                 }
                 else
                 {
@@ -102,25 +79,6 @@ namespace CLOS_Management_System
                 
             }
             catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void combobox_Load()
-        {
-            try
-            {
-                string query = "Select * from Student Order by RegistrationNumber";
-                SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-                SqlDataReader reader = sqlcmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    cmbRegNo.Items.Add(reader["RegistrationNumber"].ToString());
-                }
-                DatabaseConnection.getInstance().getConnection();
-            }
-            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -175,6 +133,25 @@ namespace CLOS_Management_System
             }
         }
 
+        private void combobox_Load()
+        {
+            try
+            {
+                string query = "Select * from Student Order by RegistrationNumber";
+                SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+                SqlDataReader reader = sqlcmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbRegNo.Items.Add(reader["RegistrationNumber"].ToString());
+                }
+                DatabaseConnection.getInstance().getConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void studentSearch(string query)
         {
             SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
@@ -188,7 +165,7 @@ namespace CLOS_Management_System
                 txtRegNo.Text = reader["RegistrationNumber"].ToString();
 
                 int status = Convert.ToInt32(reader["Status"]);
-                if (status == 1)
+                if (status == 5)
                 {
                     cmbStatus.Text = "Current Student";
                 }
@@ -198,6 +175,23 @@ namespace CLOS_Management_System
                 }
             }
             DatabaseConnection.getInstance().closeConnection();
+        }
+
+        private int status()
+        {
+            int status;
+            if (cmbStatus.Text == "Current Student")
+                status = 5;
+            else
+                status = 6;
+
+            return status;
+        }
+
+        private void clear()
+        {
+            txtFirstName.Text = txtLastName.Text = txtContact.Text
+                = txtEmail.Text = txtRegNo.Text = cmbStatus.Text = "";
         }
     }
 }

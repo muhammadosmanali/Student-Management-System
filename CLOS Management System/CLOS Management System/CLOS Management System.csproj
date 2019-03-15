@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCLOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddCLOS.Designer.cs">
+      <DependentUpon>AddCLOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRubrics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddRubrics.Designer.cs">
+      <DependentUpon>AddRubrics.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -59,6 +71,12 @@
       <DependentUpon>AttendanceStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="AttendenceList.cs" />
+    <Compile Include="CLOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CLOS.Designer.cs">
+      <DependentUpon>CLOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Form1.cs">
@@ -87,11 +105,20 @@
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCLOS.resx">
+      <DependentUpon>AddCLOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRubrics.resx">
+      <DependentUpon>AddRubrics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AttendanceStatus.resx">
       <DependentUpon>AttendanceStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOS.resx">
+      <DependentUpon>CLOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

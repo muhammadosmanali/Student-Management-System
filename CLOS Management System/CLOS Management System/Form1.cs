@@ -47,5 +47,12 @@ namespace CLOS_Management_System
             Controls.Add(obj);
             obj.BringToFront();
         }
+
+        private void BtnCLOS_Click(object sender, EventArgs e)
+        {
+            CLOS obj = new CLOS();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
     }
 }

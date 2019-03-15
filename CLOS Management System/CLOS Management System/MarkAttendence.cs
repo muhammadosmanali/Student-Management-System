@@ -42,22 +42,6 @@ namespace CLOS_Management_System
 
         }
 
-        private void dgv_Design()
-        {
-            dgvAttendence.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvAttendence.BorderStyle = BorderStyle.None;
-            dgvAttendence.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvAttendence.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvAttendence.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgvAttendence.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dgvAttendence.BackgroundColor = Color.White;
-
-            dgvAttendence.EnableHeadersVisualStyles = false;
-            dgvAttendence.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvAttendence.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dgvAttendence.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             var date = DateTime.Now.Date;
@@ -123,6 +107,22 @@ namespace CLOS_Management_System
                 lblAtt1.Text = "";
                 lblAtt2.Text = "";
             }
+        }
+
+        private void dgv_Design()
+        {
+            dgvAttendence.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAttendence.BorderStyle = BorderStyle.None;
+            dgvAttendence.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvAttendence.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvAttendence.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgvAttendence.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvAttendence.BackgroundColor = Color.White;
+
+            dgvAttendence.EnableHeadersVisualStyles = false;
+            dgvAttendence.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvAttendence.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgvAttendence.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }
