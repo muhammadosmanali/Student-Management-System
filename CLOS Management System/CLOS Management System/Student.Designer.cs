@@ -64,6 +64,7 @@
             this.btnAttendenceStatus.Text = "Student Attendence Status";
             this.btnAttendenceStatus.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAttendenceStatus.UseVisualStyleBackColor = false;
+            this.btnAttendenceStatus.Click += new System.EventHandler(this.btnAttendenceStatus_Click);
             // 
             // btnMarkAttendence
             // 

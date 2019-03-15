@@ -21,12 +21,9 @@ namespace CLOS_Management_System
         private void MarkAttendence_Load(object sender, EventArgs e)
         {
             mark_Attendence();
-            disable_Button();
+            disable_Button("Attendance", "Already Marked");
             dgv_Design();
-            DataGridViewCheckBoxColumn dgvcmb = new DataGridViewCheckBoxColumn();
-            dgvcmb.HeaderText = "Attendence";
-            dgvcmb.Name = "cmbAttendence";
-            dgvAttendence.Columns.Add(dgvcmb);
+            
         }
 
         private void mark_Attendence()
@@ -63,10 +60,52 @@ namespace CLOS_Management_System
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            
+            var date = DateTime.Now.Date;
+            string query1 = "Insert Into ClassAttendance(AttendanceDate) OUTPUT INSERTED.ID Values('" + date + "')";
+            SqlCommand sqlcmd = new SqlCommand(query1, DatabaseConnection.getInstance().getConnection());
+            int classId = Convert.ToInt32(sqlcmd.ExecuteScalar());
+
+            for (int i = 0; i < dgvAttendence.Rows.Count - 1; i++)
+            {
+                //Get Student Id
+                int studentId = 0;
+                string query2 = "Select * from Student where RegistrationNumber = '" + dgvAttendence.Rows[i].Cells[2].Value.ToString() + "'";
+                SqlCommand sqlcmd2 = new SqlCommand(query2, DatabaseConnection.getInstance().getConnection());
+                SqlDataReader reader = sqlcmd2.ExecuteReader();
+                while(reader.Read())
+                {
+                    studentId = (int)reader["Id"];
+                }
+
+                //Generate attendance
+                int attendanceId = 0;
+                if (dgvAttendence.Rows[i].Cells[0].Value == null)
+                {
+                    attendanceId = 2;
+                }
+                else
+                {
+                    attendanceId = 1;
+                }
+
+                //Insert into Table
+                string query3 = "Insert Into StudentAttendance(AttendanceId, StudentId, AttendanceStatus) " +
+                    "Values('" + classId + "', '" + studentId + "', '" + attendanceId + "')";
+                SqlCommand sqlcmd3 = new SqlCommand(query3, DatabaseConnection.getInstance().getConnection());
+                sqlcmd3.ExecuteNonQuery();
+            }
+            DatabaseConnection.getInstance().closeConnection();
+            MessageBox.Show("Attendence Marked Successfully");
+
+            for (int i = 0; i < dgvAttendence.Rows.Count - 1; i++)
+            {
+                dgvAttendence.Rows[i].Cells[0].Value = null;
+            }
+
+            disable_Button("Today", "Attendance Marked");
         }
 
-        private void disable_Button()
+        private void disable_Button(string text1, string text2)
         {
             var date = DateTime.Now.Date;
             string query = "Select count(*) from ClassAttendance where AttendanceDate = '" + date + "'";
@@ -75,8 +114,8 @@ namespace CLOS_Management_System
             if(count > 0)
             {
                 btnSubmit.Enabled = false;
-                lblAtt1.Text = "Attendance";
-                lblAtt2.Text = "Already Marked";
+                lblAtt1.Text = text1;
+                lblAtt2.Text = text2;
             }
             else
             {

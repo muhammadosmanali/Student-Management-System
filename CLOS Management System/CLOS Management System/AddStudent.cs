@@ -71,9 +71,9 @@ namespace CLOS_Management_System
         {
             int status;
             if (cmbStatus.Text == "Current Student")
-                status = 1;
+                status = 5;
             else
-                status = 0;
+                status = 6;
 
             return status;
         }

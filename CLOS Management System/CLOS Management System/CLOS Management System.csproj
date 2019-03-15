@@ -52,6 +52,12 @@
     <Compile Include="AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttendanceStatus.Designer.cs">
+      <DependentUpon>AttendanceStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttendenceList.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DatabaseConnection.cs" />
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceStatus.resx">
+      <DependentUpon>AttendanceStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

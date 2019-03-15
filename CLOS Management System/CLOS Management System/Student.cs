@@ -30,5 +30,12 @@ namespace CLOS_Management_System
             Controls.Add(obj);
             obj.BringToFront();
         }
+
+        private void btnAttendenceStatus_Click(object sender, EventArgs e)
+        {
+            AttendanceStatus obj = new AttendanceStatus();
+            Controls.Add(obj);
+            obj.BringToFront();
+        }
     }
 }
